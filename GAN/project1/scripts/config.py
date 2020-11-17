@@ -1,23 +1,23 @@
 
-#BASIC SETTING
+#BASIC SETTINGs:
 
 folder_name = "project1"
 
-image_size = 32   #size of images created in pixels ie 64x64 pixels
+image_size = 64   #size of images created in pixels ie 64x64 pixels. Values available: {8,16,32,64,128}
 
 nc = 3            # Number of channels in the training images. For color images this is 3. For black and white use 1
 
-nz = 50         #Size of z latent vector (generator input) 
+nz = 100          #Size of z latent vector (generator input) 
                   #for image_size = 32,64,128 use 50,100,400 respectively
 
-ngf = 32          # Size of feature maps in generator;
+ngf = 64          # Size of feature maps in generator;
                   # set to image_size, unless image_size =128, then set to 64
 
-ndf = 32          # Size of feature maps in discriminator;
+ndf = 64          # Size of feature maps in discriminator;
                   # set to image_size. Unless image_size =128, then set to 32
 
 
-#ADVANCED SETTINGS
+#ADVANCED SETTINGS:
 
 
 workers = 8         # Number of workers for dataloader
@@ -33,7 +33,7 @@ ngpu = 1            # Number of GPUs available. Use 0 for CPU mode.
 lsf = 0.2           # label softening factor  fake= 0:lsf; real = (1-lsf): 1
 
 
-#DON'T EDIT
+#DON'T EDIT! ...
 
 root_dir = "/content/drive/My Drive/GAN/" + folder_name +"/"
 dataset_dir = root_dir + "data/processed/"

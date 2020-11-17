@@ -151,7 +151,7 @@ for subdir, dirs, files in os.walk(rawdata_dir):
             except:
                 print("error on img: ", fn) 
                 error_cnt+=1
-        elif (ext==".mp4"):
+        elif (ext==".mp4" or ext==".mkv" or ext==".avi"):
             
             try:
                 # new i defined so further images don't overwrite those from the video

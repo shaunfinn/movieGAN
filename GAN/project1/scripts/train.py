@@ -59,6 +59,7 @@ print("Starting Training Loop for ", str(num_epochs), " epochs...")
 # For each epoch
 for epoch in range(epoch_start, epoch_end):
     # For each batch in the dataloader
+    print( "epoch ", epoch)
     for i, data in enumerate(dataloader, 0):
 
         ############################
@@ -113,10 +114,10 @@ for epoch in range(epoch_start, epoch_end):
         optimizerG.step()
 
         # Output training stats
-        if i % 1 == 0:
-            print('[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f\tD(G(z)): %.4f / %.4f'
-                % (epoch, epoch_end, i, len(dataloader),
-                    errD.item(), errG.item(), D_x, D_G_z1, D_G_z2))
+        #if i % 1 == 0:
+        #    print('[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f\tD(G(z)): %.4f / %.4f'
+        #        % (epoch, epoch_end, i, len(dataloader),
+        #            errD.item(), errG.item(), D_x, D_G_z1, D_G_z2))
 
         # Save Losses for plotting later
         G_losses.append(errG.item())

@@ -105,5 +105,5 @@ out.release()
 print("movie done")
  
 #remove temp directory
-if os.path.exists(temp_dir):
-    shutil.rmtree(temp_dir)
+#if os.path.exists(temp_dir):
+#    shutil.rmtree(temp_dir)
